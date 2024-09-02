@@ -1,0 +1,23 @@
+﻿<div>
+    <img class="image-container" src="@imageSource" />
+</div>
+
+@* <button @attributes="AdditionalAttributes" @onclick="OnClick">@ChildContent</button> *@
+
+@code {
+    // [Parameter]
+    // public EventCallback<MouseEventArgs> OnClick { get; set; }
+
+    // [Parameter]
+    // public RenderFragment? ChildContent { get; set; }
+
+    // [Parameter(CaptureUnmatchedValues = true)]
+    // public Dictionary<string, object>? AdditionalAttributes { get; set;  }
+
+    private string? imageSource = "Images/Screenie.png";
+
+    private void ShowImage(string source)
+    {
+        imageSource = source;
+    }
+}
